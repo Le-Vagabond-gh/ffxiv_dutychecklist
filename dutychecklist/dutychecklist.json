@@ -1,0 +1,16 @@
+{
+    "Author": "Le Vagabond",
+    "Name": "DutyChecklist",
+    "InternalName": "dutychecklist",
+    "AssemblyVersion": "0.0.0.1",
+    "Description": "Shows a checklist of all duties and which ones you have unlocked",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Le-Vagabond-gh/ffxiv_dutychecklist",
+    "DalamudApiLevel": 14,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Track your duty unlock progress!",
+    "AcceptsFeedback": true
+}
