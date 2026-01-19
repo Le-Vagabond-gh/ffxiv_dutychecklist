@@ -52,7 +52,7 @@ public class DutyFinderButton : IDisposable
             if (ImGui.Begin("##DutyChecklistButton", flags))
             {
                 ImGui.SetWindowFontScale(scale);
-                if (ImGui.Button("Unlock CHecklist", new Vector2(-1, 0)))
+                if (ImGui.Button("Unlock Checklist", new Vector2(-1, 0)))
                 {
                     plugin.MainWindow.IsOpen = !plugin.MainWindow.IsOpen;
                 }

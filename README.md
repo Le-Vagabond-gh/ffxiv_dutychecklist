@@ -1,6 +1,8 @@
 ## DutyChecklist
 A checklist plugin that shows all duties in the game and tracks which ones you have unlocked.
 
+![Screenshot](screenshot.png)
+
 **Author:** Le Vagabond
 
 ## Installation
