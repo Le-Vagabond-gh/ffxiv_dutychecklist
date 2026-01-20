@@ -14,6 +14,7 @@ public sealed class Plugin : IDalamudPlugin
     public Configuration Configuration { get; init; }
     public MainWindow MainWindow { get; init; }
     public DutyFinderButton DutyFinderButton { get; init; }
+    public PartyFinderDutyName PartyFinderDutyName { get; init; }
 
     public Plugin(IDalamudPluginInterface pluginInterface)
     {
@@ -25,6 +26,7 @@ public sealed class Plugin : IDalamudPlugin
 
         this.MainWindow = new MainWindow(this);
         this.DutyFinderButton = new DutyFinderButton(this);
+        this.PartyFinderDutyName = new PartyFinderDutyName(this);
 
         Service.CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
         {
@@ -48,6 +50,7 @@ public sealed class Plugin : IDalamudPlugin
         Service.CommandManager.RemoveHandler(CommandName);
         Service.CommandManager.RemoveHandler(CommandNameShort);
 
+        this.PartyFinderDutyName.Dispose();
         this.DutyFinderButton.Dispose();
         this.MainWindow.Dispose();
     }
@@ -61,6 +64,7 @@ public sealed class Plugin : IDalamudPlugin
     {
         this.MainWindow.Draw();
         this.DutyFinderButton.Draw();
+        this.PartyFinderDutyName.Draw();
     }
 
     private void OpenMainUI()

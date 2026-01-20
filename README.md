@@ -29,6 +29,7 @@ note: adding custom repositories to Dalamud is a security risk, this way protect
 - Sort by clicking column headers
 - Click the wiki icon to search for a duty on the FFXIV Wiki
 - Progress counter showing how many duties you've unlocked
+- Party Finder integration: shows the actual duty name when viewing a "Locked Duty" listing
 
 ## Disclaimer
 This plugin shows the names of ALL duties in the game, including ones you haven't unlocked yet. If reading "The Final Trial of the Ultimate Extreme Savage Warrior of Light's Mom" before you get there ruins your immersion, that's on you. You have been warned. No refunds.
