@@ -257,6 +257,7 @@ public class MainWindow : IDisposable
                 bool isUnlocked = false;
                 try
                 {
+                    // Use Content.RowId which points to the actual InstanceContent
                     isUnlocked = UIState.IsInstanceContentUnlocked(cfc.Content.RowId);
                 }
                 catch
@@ -277,6 +278,13 @@ public class MainWindow : IDisposable
 
                 allDuties.Add(dutyInfo);
             }
+
+            // Deduplicate entries with the same name (case-insensitive for "The" vs "the" variants)
+            // Keep the unlocked one, or if both same status, keep higher RowId (newer entry)
+            allDuties = allDuties
+                .GroupBy(d => d.Name, StringComparer.OrdinalIgnoreCase)
+                .Select(g => g.OrderByDescending(d => d.IsUnlocked).ThenByDescending(d => d.RowId).First())
+                .ToList();
 
             Service.PluginLog.Information($"Loaded {allDuties.Count} duties");
         }
