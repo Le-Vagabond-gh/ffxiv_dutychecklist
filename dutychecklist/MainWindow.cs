@@ -60,7 +60,7 @@ public class MainWindow : IDisposable
 
         if (ImGui.Begin("Duty Checklist###DutyChecklist", ref this.IsOpen))
         {
-            if (Service.ClientState.LocalPlayer == null)
+            if (Service.ObjectTable.LocalPlayer == null)
             {
                 ImGui.TextColored(new Vector4(1, 0.5f, 0.5f, 1), "Please log in to view duty information.");
                 ImGui.End();
