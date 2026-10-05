@@ -6,16 +6,21 @@ A checklist plugin that shows all duties in the game and tracks which ones you h
 **Author:** Le Vagabond
 
 ## Installation
-- Download the DLL and manifest JSON from [Releases](https://github.com/yourusername/ffxiv_dutychecklist/releases) in the same location
 - Open the Dalamud Plugin Installer
 - Go to Settings
 - Head to the "Experimental" tab
-- Under "Dev Plugin Locations", click "Select dev plugin DLL"
-- Add the DLL you downloaded
-- Press "Save and Close"
-- in the main plugin installer window, enable the plugin in Dev Tools
+- Under "Custom Plugin Repositories", paste this URL and click the `+` button:
 
-note: adding custom repositories to Dalamud is a security risk, this way protects you from malicious updates from untrusted sources
+  ```
+  https://raw.githubusercontent.com/Le-Vagabond-gh/FFXIV_Dalamud_Repo/main/repo.json
+  ```
+
+- Press "Save and Close"
+- Install "DutyChecklist" from the main plugin installer window
+
+Updates then arrive through the plugin installer like for any other plugin.
+
+If you would rather control updates yourself, download `dutychecklist-<version>-full.zip` from [Releases](https://github.com/Le-Vagabond-gh/ffxiv_dutychecklist/releases) (releases are immutable, so a published build can never be swapped), extract it and add the extracted `dutychecklist.dll` as a dev plugin location under the same "Experimental" tab.
 
 ## Usage
 - Use `/dutychecklist` or `/dcl` to open the checklist window
